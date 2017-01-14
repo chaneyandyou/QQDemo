@@ -1,0 +1,555 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Microsoft YaHei";
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "微软雅黑";
+}
+.page{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/*使用公共类优化*/
+.pos{
+    position: absolute;
+    left: 50%;
+    top:50%;
+}
+.main{
+    width: 900px;
+    height: 600px;
+    margin-left: -450px;
+    margin-top: -300px;
+}
+@keyframes zhuan{
+    0%{ transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);}
+    100%{ transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(360deg) scaleX(1) scaleY(1)scaleZ(1);}
+}
+/*-----------------这里是page1分割线---------------------*/
+.page1{
+    background:url(../images/page1_glow.png) no-repeat center 50px,linear-gradient(0deg, #395ecb 0%, #3657be 35%, #242161 75%, #1a0531 100%);
+}
+.page1 .p1_main{
+    width: 960px;
+    height: 600px;
+    margin-left: -480px;
+    margin-top:-300px;
+}
+.p1_main h1{
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.p1_main h1 img{
+    width: 300px;
+    float: left;
+}
+.p1_main h1 a{
+    float: right;
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius:5px;
+    text-align: center;
+}
+.p1_main h1 a:hover{
+    background: #fff;
+    color:#395ecb;
+}
+.p1_main ul{
+    width: 900px;
+    height: 500px;
+    animation:p1zhuan 45s infinite;
+    transform-style: preserve-3d;
+}
+.p1_main ul>li{
+    margin-left:-290px;
+    margin-top:-180px;
+    backface-visibility: hidden;  /* 转到背面隐藏  */
+}
+@keyframes p1zhuan{
+    0%{transform:translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);}
+    100%{transform:translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(360deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);}
+}
+.p1_main li:nth-child(1){
+    transform:translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.p1_main li:nth-child(2){
+    transform:translateX(0) translateY(0) translateZ(50px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.p1_main li:nth-child(3){
+    transform:translateX(0) translateY(0) translateZ(0px) rotateX(0deg) rotateY(180deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.p1_main li:nth-child(4){
+    transform:translateX(0) translateY(0) translateZ(-50px) rotateX(0deg) rotateY(180deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.p1_main li:nth-child(5){
+    transform:translateX(0) translateY(0) translateZ(-100px) rotateX(0deg) rotateY(180deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.p1_main .p1Round{
+    margin-left: -340px;
+    margin-top: -340px;
+    transform:translateX(0) translateY(100px) translateZ(-20px) rotateX(-110deg) rotateY(-6deg) rotateZ(0deg) scaleX(2.6) scaleY(1) scaleZ(1);
+}
+.p1_main .p1Round img{
+    animation:zhuan 5s infinite linear;
+}
+/*-----------------这里是page2分割线---------------------*/
+.page2{
+    background-image:linear-gradient(0deg, rgb(65, 185, 62) 0%, rgb(59, 158, 60) 35%, rgb(39, 69, 53) 75%, rgb(25, 5, 48) 100%);
+    perspective: 1000px;
+}
+.page2>span{
+    width: 5000px;
+    height: 1px;
+    background: yellow;
+    display: block;
+    margin-left: -2500px;
+    margin-top: 6px;
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(-50deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+    z-index: 1;
+}
+.page2 img:nth-of-type(1){
+    margin-left:-178px;
+    margin-top:-178px;
+}
+.page2 img:nth-of-type(2){
+    margin-left:90px;
+    margin-top:-54px;
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+    z-index: 222;
+}
+.p2circle{
+    perspective: 1000px;
+    display: none;
+}
+.p2circle li{
+    width: 350px;
+    height: 350px;
+    margin-left: -175px;
+    margin-top: -175px;
+    transition:all 2s;
+}
+.p2circle li:nth-child(1){
+    transform: translateX(267px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(30deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p2circle li:nth-child(2){
+    transform: translateX(113px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(30deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p2circle li:nth-child(3){
+    transform: translateX(45px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(30deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p2circle li:nth-child(4){
+    transform: translateX(-63px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(30deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p2circle li img{
+    animation:zhuan 1s infinite linear;
+}
+.p2circle li:last-child img{
+    animation:none;
+}
+.page2 .title{
+    width: 355px;
+    height: 160px;
+    margin-left:-348px;
+    margin-top: 55px;;
+    z-index: 333;
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+    transition: all 2s;
+    display: none;
+}
+.page2 .title p{
+    color: #fff;
+    opacity: 0.8;
+    margin-top:15px;
+    line-height:24px;
+    font-size: 14px;
+}
+.page2.current .p2circle li{
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg) rotateZ(0deg) scaleX(3) scaleY(3)scaleZ(1);
+}
+.page2.current .title{
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg) rotateZ(0deg) scaleX(3) scaleY(3)scaleZ(1);
+}
+/*-----------------这里是page3分割线---------------------*/
+.page3{
+    background: linear-gradient(0deg, #395ecb 0%, #3657be 35%, #242161 75%, #1a0531 100%);
+    perspective: 1000px;
+}
+.page3 .p3_bg img:nth-child(1){
+    width: 450px;
+    height: 150px;
+    margin-left:70px;
+    margin-top:-75px;
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-25deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+    transition:all 1s;
+}
+.page3 .p3_bg img:nth-child(2){
+    width: 1360px;
+    height: 1111px;
+    margin-left:-680px;
+    margin-top:-555px;
+    transition:all 2s;
+}
+.page3 .p3_bg img:nth-child(3){
+    width: 130px;
+    height: 130px;
+    margin-left:-65px;
+    margin-top:-65px;
+}
+
+.p3_circle,.p3_circle ul{
+    width: 900px;
+    height: 600px;
+    margin-left: -450px;
+    margin-top:-300px;
+}
+.page3 .p3_circle ul{
+    transition: all 2s;
+}
+.p3_circle li{
+    width: 680px;
+    height: 680px;
+    border: 2px solid #5ec0ff;
+    border-radius:50%;
+    margin-left: -340px;
+    margin-top: -340px;
+}
+.p3_circle li:nth-child(1){
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p3_circle li:nth-child(2){
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(60deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p3_circle li:nth-child(3){
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-60deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+}
+.p3_circle ul{
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(80deg) rotateY(0deg) rotateZ(10deg) scaleX(1) scaleY(1) scaleZ(1);
+    transform-style:preserve-3d;
+}
+.p3_circle li:nth-child(1) img{
+    animation:zhuan 2s infinite linear;
+}
+.p3_circle li:nth-child(2) img{
+    animation:zhuan 3s infinite linear;
+}
+.p3_circle li:nth-child(3) img{
+    animation:zhuan 4s infinite linear;
+}
+.p3_circle{
+    animation:zhuan 20s infinite linear;
+}
+.page3.current .p3_bg img:nth-of-type(1),
+.page3.current .p3_bg img:nth-of-type(2){
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(90deg) rotateZ(0deg) scaleX(2) scaleY(2)scaleZ(1);
+}
+.page3.current .p3_circle ul{
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(90deg) rotateZ(0deg) scaleX(3) scaleY(3)scaleZ(1);
+}
+/*-----------------这里是page4分割线---------------------*/
+.page4{
+    background: url("../images/page4_glow.png") no-repeat center 200px,linear-gradient(0deg, #ff9f42 0%, #ed923d 35%, #6d3816 75%, #2e0b04 100%);
+}
+.page4 .p4_line img:nth-of-type(1){
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left:-100px;
+    margin-top:-61px;
+    animation: p4_line 1s infinite;
+    z-index:1;
+}
+.page4 .p4_line span:nth-of-type(1){
+    display: block;
+    width: 5000px;
+    height: 2px;
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 40%;
+    z-index:1;
+}
+.page4 .p4_line img:nth-of-type(2){
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    margin-left:-100px;
+    margin-top:-61px;
+    animation: p4_line 1.2s infinite;
+    z-index:1;
+}
+.page4 .p4_line span:nth-of-type(2){
+    display: block;
+    width: 5000px;
+    height: 2px;
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 80%;
+    z-index:1;
+}
+@keyframes p4_line {
+    0%{ transform: translateX(-1000px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);}
+    100%{ transform: translateX(1000px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);}
+}
+
+.p4circle,.p4circle ul{
+    z-index:222;
+}
+.p4circle li{
+    width: 414px;
+    height: 414px;
+    margin-left: -207px;
+    margin-top: -207px;
+}
+.p4circle li:nth-child(1){
+    transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1.1) scaleY(1.1) scaleZ(1);
+}
+.p4circle li:nth-child(2){
+    transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1.1) scaleY(1.1) scaleZ(1);
+}
+.p4circle li:nth-child(3){
+    transform: translateX(0px) translateY(0px) translateZ(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(0.9) scaleY(0.9) scaleZ(1);
+}
+.p4circle li:nth-child(4){
+    transform:  translateX(0px) translateY(0px) translateZ(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.p4circle li:nth-child(5){
+    transform: translateX(0px) translateY(0px) translateZ(10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1.1) scaleY(1.1) scaleZ(1);
+}
+.page4 .p4circle li:nth-child(1) img{
+    animation:zhuan 60s infinite linear;
+}
+.page4 .p4circle li:nth-child(2) img{
+    animation:zhuan 20s infinite linear;
+}
+.page4 .p4circle li:nth-child(3) img{
+    animation:zhuan 20s infinite linear;
+}
+.page4 .p4circle li:nth-child(4) img{
+    animation:zhuan 5s infinite linear;
+}
+.page4 .p4circle li:nth-child(5) img{
+    animation:zhuan 4s infinite linear;
+}
+.p4circle ul{
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(-30deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)scaleZ(1);
+    transform-style:preserve-3d;
+}
+.page4 .p4tag{
+    width: 200px;
+    height: 55px;
+    margin-left: -380px;
+    margin-top: -60px;
+}
+.page4 .p4tag p{
+    color:#fff;
+    font-size: 14px;
+    margin-top:24px;
+}
+.page4 .p4Title{
+    width: 300px;
+    height: 71px;
+    margin-left: 230px;
+    margin-top: -70px;
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(30deg) rotateY(0deg) rotateZ(0deg) scaleX(1.1) scaleY(1)scaleZ(1);
+}
+.p4circle,.p4tag,.p4Title{
+    transition:all 1s;
+}
+.page4.current .p4circle,.page4.current .p4tag,.page4.current .p4Title{
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(90deg) rotateZ(0deg) scaleX(6) scaleY(6) scaleZ(1);
+}
+/*-----------------这里是page5分割线---------------------*/
+.page5{
+    background: url("../images/page5_glow.png") no-repeat center -350px,linear-gradient(0deg, #d74d53 0%, #c44655 35%, #4c184c 75%, #110145 100%);
+}
+.page5 .p5_main{
+    width: 900px;
+    height: 600px;
+    margin-left: -450px;
+    margin-top:-300px;
+}
+.p5_main li{
+    background: url("../images/page5_bubble.png") no-repeat center center;
+    width: 305px;
+    height: 305px;
+    border-radius:50%;
+    text-align: center;
+    margin-left:-152px;
+    margin-top:-152px;
+    line-height:305px;
+    transition: all 1s;
+}
+.p5_main li img{
+    vertical-align: middle;
+}
+.p5_circle:nth-of-type(1){
+    margin-left:-350px;
+    margin-top:0px;
+    transform: scale(0.8);
+}
+.p5_circle:nth-of-type(1) img{
+    transform:scale(1.2);
+    vertical-align: middle;
+}
+.p5_circle:nth-of-type(2){
+    margin-left:-300px;
+    margin-top:-300px;
+    transform: scale(0.7);
+}
+.p5_circle:nth-of-type(2) img{
+    transform:scale(1.5);
+    vertical-align: middle;
+}
+.p5_circle:nth-of-type(4){
+    margin-left:150px;
+    margin-top:-50px;
+    transform: scale(0.6);
+}
+.p5_circle:nth-of-type(4) img{
+    transform:scale(1.5);
+    vertical-align: middle;
+}
+.p5_circle:nth-of-type(5){
+    margin-left:150px;
+    margin-top:-300px;
+    transform: scale(0.3);
+}
+.p5_circle:nth-of-type(5) img{
+    transform:scale(1.2);
+    vertical-align: middle;
+}
+.p5_circle:nth-of-type(6){
+    margin-left:60px;
+    margin-top:-360px;
+    transform: scale(0.5);
+}
+.p5_circle:nth-of-type(6) img{
+    transform:scale(2);
+    vertical-align: middle;
+}
+.page5>p{
+    color: #fff;
+    font-size: 16px;
+    line-height:24px;
+    opacity:0.9;
+    margin-left:-380px;
+    margin-top:-40px;
+    transition: all 1s;
+}
+.page5>img{
+    margin-left:165px;
+    margin-top:-90px;
+    transition: all 1s;
+}
+.page5.current .p5_main li:nth-of-type(1){
+    transform: translateX(-1000px) translateY(500px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.page5.current .p5_main li:nth-of-type(2){
+    transform: translateX(-1000px) translateY(-500px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.page5.current .p5_main li:nth-of-type(3){
+    transform: translateX(-1000px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.page5.current .p5_main li:nth-of-type(4){
+    transform: translateX(1000px) translateY(500px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.page5.current .p5_main li:nth-of-type(5){
+    transform: translateX(1000px) translateY(-500px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.page5.current .p5_main li:nth-of-type(6){
+    transform: translateX(1000px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+.page5.current p,.page5.current img{
+    transform: translateX(0px) translateY(0px) translateZ(0) rotateX(0deg) rotateY(90deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    transform-origin:100% 100%;
+}
+/*-----------------这里是gps分割线---------------------*/
+.gps{
+    width: 10px;
+    height: 130px;
+    position: absolute;
+    top:40%;
+    right:20px;
+}
+.gps>ul{
+    width: 100%;
+    height: 100%;
+}
+.gps>ul>li{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top:18px;
+}
+.gps>ul>li.cur{
+    background: rgba(255, 255, 255, 1);
+}
+/*-----------------这里是footer分割线---------------------*/
+.footer{
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: absolute;
+    left:0;
+    bottom:0;
+    color:#fff;
+    font-size: 12px;
+}
+.footer>span,.footer li{
+    float: left;
+    margin-left:20px;
+}
+.footer ul{
+    float: right;
+    overflow: hidden;
+}
+/*-----------------这里是向下小logo分割线---------------------*/
+.scroll{
+    position: absolute;
+    left:50%;
+    bottom:40px;
+    margin-left: -15px;
+    animation: scroll 1s infinite alternate;
+}
+@keyframes scroll{
+    0%{ transform: translateY(20px);}
+    100%{ transform: translateY(10px);}
+}
+.logo2{
+    position: absolute;
+    left:10px;
+    top:10px;
+    width: 230px;
+    height: 30px;
+    display: none;
+}
+.logo2 img{
+    float:left;
+    margin-top: 6px;
+}
+.logo2 a{
+    float:right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    border-radius:15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
